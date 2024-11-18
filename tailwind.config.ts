@@ -9,9 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        brandCol: "var(--primary-brand-col)",
       },
+      fontFamily: {
+        "funnelSans": ["Funnel Sans", "Arial", "sans-serif"],
+      }
     },
   },
   plugins: [],
