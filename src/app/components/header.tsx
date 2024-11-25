@@ -1,16 +1,18 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function header() {
+
+  const currentPath = usePathname();
+
   return (
-    <div className="flex flex-row justify-between items-center p-3 text-white select-none">
-      <Link href="/" className="text-xl">
-        <span className="text-sky-300 font-funnelSans">Scots</span>
-        Farm
-      </Link>
+    <div className={`flex flex-row justify-between items-center p-3 text-zinc-200 select-none bg-zinc-900 bg-opacity-10 font-funnelSans`}>
+      <Link href="/" className="text-xl">ScotsFarm</Link>
       <nav className="flex flex-row items-center gap-8">
-        <Link href="/about">About us</Link>
+        <Link href="/about" className={`${currentPath === '/about' && 'text-white'}`}>About us</Link>
         <Link href="/find-us">Location</Link>
-        <Link href="" className="bg-zinc-100 p-2 rounded-3xl text-black">
+        <Link href="/contact" >
           Contact us
         </Link>
       </nav>

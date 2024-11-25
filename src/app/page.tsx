@@ -1,3 +1,4 @@
+
 import Header from './components/header';
 import Image from 'next/image';
 
@@ -8,8 +9,8 @@ export default function Home() {
       <Image
         src="/glencoe.jpg"
         alt="Image of Glencoe"
-        layout="fill"
-        objectFit="cover"
+        fill={true}
+        style={{objectFit: 'cover'}}
         className="absolute top-0 left-0 -z-50"
       />
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 -z-40" />
