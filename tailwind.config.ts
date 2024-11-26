@@ -13,6 +13,8 @@ export default {
       },
       fontFamily: {
         "funnelSans": ["Funnel Sans", "Arial", "sans-serif"],
+        "Rubik": ["Rubik", 'sans-serif'],
+        "Titil": ["Titillium Web", "sans-serif"]
       }
     },
   },

@@ -9,11 +9,13 @@ export default function Header() {
 	const [toggle, setToggle] = useState(false);
 	const [dropdown, setDropDown] = useState(false);
 
-    //TODO: Optimise styling (aka dont repeat yourself)
-
 	return (
 		<div
-			className={`flex flex-row justify-between items-center p-3 text-zinc-200 select-none bg-zinc-900 bg-opacity-10 font-funnelSans z-50 px-6`}
+			className={`flex flex-row justify-between items-center p-3 text-zinc-300 text-opacity-80 select-none bg-zinc-900 ${
+				currentPath.endsWith("/about")
+					? "bg-opacity-30"
+					: "bg-opacity-10"
+			} font-funnelSans z-50 px-6`}
 		>
 			<Link href='/' className='text-xl text-white'>
 				ScotsFarm
@@ -49,11 +51,27 @@ export default function Header() {
 							setDropDown(!dropdown);
 						}}
 					/>
-					<div className='absolute flex flex-col top-[2.4rem] text-white'>
+					<div className='absolute flex flex-col top-[2.4rem] -translate-x-4 text-white'>
 						{dropdown && (
-							<div className='flex flex-col bg-neutral-400 bg-opacity-40 gap-2 rounded-b-lg text-center z-50'>
-								<Link href={"/times"} className="hover:bg-zinc-300 duration-200 hover:bg-opacity-60">Opening Times</Link>
-								<Link href={"/"} className="hover:bg-zinc-300 duration-200 hover:bg-opacity-60">Our Services</Link>
+							<div className='flex flex-col bg-zinc-900 bg-opacity-20 gap-2 rounded-b-lg text-center z-50 text-neutral-200 last:rounded-b-lg'>
+								<Link
+									href={"/times"}
+									className='hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2'
+								>
+									Opening Times
+								</Link>
+								<Link
+									href={"/services"}
+									className='hover:bg-zinc-300 duration-200 hover:bg-opacity-20 px-2 p-1'
+								>
+									Our Services
+								</Link>
+								<Link
+									href={"/sustainability"}
+									className='hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2 pb-2 hover:rounded-b-lg p-1'
+								>
+									Sustainability
+								</Link>
 							</div>
 						)}
 					</div>
