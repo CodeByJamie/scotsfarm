@@ -11,7 +11,7 @@ export default function Header() {
 
 	return (
 		<div
-			className={`flex flex-row justify-between items-center p-3 text-zinc-300 text-opacity-80 select-none bg-zinc-900 ${
+			className={`flex flex-row justify-between items-center p-4 text-zinc-300 text-opacity-80 select-none bg-zinc-900 ${
 				currentPath.endsWith("/about")
 					? "bg-opacity-30"
 					: "bg-opacity-10"
@@ -33,14 +33,14 @@ export default function Header() {
 				</Link>
 				<div className='relative flex flex-row items-center gap-2'>
 					<Link
-						href='/find-us'
+						href='/services'
 						className={`${
 							currentPath.endsWith("location")
 								? "text-white"
 								: "hover:text-white duration-200"
 						}`}
 					>
-						Location
+						Our Services
 					</Link>
 					<ChevronRightIcon
 						className={`size-4 cursor-pointer ${
@@ -51,7 +51,7 @@ export default function Header() {
 							setDropDown(!dropdown);
 						}}
 					/>
-					<div className='absolute flex flex-col top-[2.4rem] -translate-x-4 text-white'>
+					<div className='absolute flex flex-col top-[2.6rem] -translate-x-1 text-white'>
 						{dropdown && (
 							<div className='flex flex-col bg-zinc-900 bg-opacity-20 gap-2 rounded-b-lg text-center z-50 text-neutral-200 last:rounded-b-lg'>
 								<Link
@@ -61,10 +61,10 @@ export default function Header() {
 									Opening Times
 								</Link>
 								<Link
-									href={"/services"}
+									href={"/location"}
 									className='hover:bg-zinc-300 duration-200 hover:bg-opacity-20 px-2 p-1'
 								>
-									Our Services
+									Location
 								</Link>
 								<Link
 									href={"/sustainability"}

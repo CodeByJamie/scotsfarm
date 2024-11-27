@@ -23,7 +23,7 @@ export default function About() {
 					<span className='pt-10 text-6xl font-Rubik text-white'>
 						About Us
 					</span>
-					<span className='max-w-2xl text-center'>
+					<span className='max-w-2xl text-center text-zinc-50'>
 						Here, you'll find a delightful shop filled with local
 						produce, plants, and handmade goods, perfect for taking
 						a bit of the farm home with you. Our petting zoo offers
