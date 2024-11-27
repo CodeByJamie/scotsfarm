@@ -38,7 +38,9 @@ export default function Header() {
 							currentPath.endsWith("location")
 								? "text-white"
 								: "hover:text-white duration-200"
-						}`}
+						}`}>
+					<Link
+						href='/find-us'
 					>
 						Our Services
 					</Link>
@@ -53,7 +55,7 @@ export default function Header() {
 					/>
 					<div className='absolute flex flex-col top-[2.6rem] -translate-x-1 text-white'>
 						{dropdown && (
-							<div className='flex flex-col bg-zinc-900 bg-opacity-20 gap-2 rounded-b-lg text-center z-50 text-neutral-200 last:rounded-b-lg'>
+							<div className={`flex flex-col bg-zinc-900 bg-opacity-30 gap-2 rounded-b-lg text-center z-50 ${currentPath.endsWith('/location') ? 'text-white': 'text-neutral-200'} last:rounded-b-lg`}>
 								<Link
 									href={"/times"}
 									className='hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2'
