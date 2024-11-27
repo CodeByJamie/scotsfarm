@@ -11,11 +11,7 @@ export default function Header() {
 
 	return (
 		<div
-			className={`flex flex-row justify-between items-center p-3 text-zinc-300 text-opacity-80 select-none bg-zinc-900 ${
-				currentPath.endsWith("/about")
-					? "bg-opacity-30"
-					: "bg-opacity-10"
-			} font-funnelSans z-50 px-6`}
+			className={`flex flex-row justify-between items-center p-3 text-zinc-300 text-opacity-80 select-none bg-zinc-900 bg-opacity-30 font-funnelSans z-50 px-6`}
 		>
 			<Link href='/' className='text-xl text-white'>
 				ScotsFarm
@@ -31,14 +27,13 @@ export default function Header() {
 				>
 					About us
 				</Link>
-				<div className='relative flex flex-row items-center gap-2'>
-					<Link
-						href='/find-us'
-						className={`${
+				<div className={`relative flex flex-row items-center gap-2 ${
 							currentPath.endsWith("location")
 								? "text-white"
 								: "hover:text-white duration-200"
-						}`}
+						}`}>
+					<Link
+						href='/find-us'
 					>
 						Location
 					</Link>
@@ -53,7 +48,7 @@ export default function Header() {
 					/>
 					<div className='absolute flex flex-col top-[2.4rem] -translate-x-4 text-white'>
 						{dropdown && (
-							<div className='flex flex-col bg-zinc-900 bg-opacity-20 gap-2 rounded-b-lg text-center z-50 text-neutral-200 last:rounded-b-lg'>
+							<div className={`flex flex-col bg-zinc-900 bg-opacity-30 gap-2 rounded-b-lg text-center z-50 ${currentPath.endsWith('/location') ? 'text-white': 'text-neutral-200'} last:rounded-b-lg`}>
 								<Link
 									href={"/times"}
 									className='hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2'

@@ -31,9 +31,9 @@ export default function About() {
 						serves up delicious homemade treats.
 					</span>
 				</div>
-				<div className='absolute top-0 flex flex-row items-center justify-center bg-zinc-700 bg-opacity-30 h-full w-full select-none -z-10 px-5'>
-					<div className='relative flex flex-row items-center justify-evenly gap-56 w-full ml-[6.5rem]'>
-						<div className='flex flex-col items-center gap-2 max-w-xs text-center'>
+				<div className='absolute top-0 flex flex-row items-center justify-center bg-zinc-700 bg-opacity-30 h-full w-full select-none -z-10 p-6 overflow-hidden'>
+					<div className='relative flex flex-row items-center justify-center w-full top-10 gap-16 border-2 max-w-fit translate-x-10'>
+						<div className='flex flex-col items-center gap-2 max-w-[10rem] text-center mx-16'>
 							<HeroIcons.QuestionMarkCircleIcon className='size-9 border border-zinc-200 rounded-full p-1 shadow-lg' />
 							<span className='text-2xl'>Who We Are</span>
 							<span className='font-semibold'>
@@ -41,7 +41,7 @@ export default function About() {
 								Carlisle who thrives on sustainability.
 							</span>
 						</div>
-						<div className='flex flex-col items-center gap-2 max-w-xs -translate-x-10 text-center'>
+						<div className='flex flex-col items-center gap-2 max-w-xs text-center'>
 							<HeroIcons.TrophyIcon className='size-9 border border-zinc-200 rounded-full p-1 shadow-lg' />
 							<span className='text-2xl'>Our Goal</span>
 							<span className='font-semibold'>
