@@ -24,53 +24,65 @@ export default function Header() {
 				<Link
 					href='/about'
 					className={`${
-						currentPath.endsWith("about")
+						currentPath.endsWith(
+							"about"
+						)
 							? "text-white"
 							: "hover:text-white duration-200"
 					}`}
 				>
 					About us
 				</Link>
-				<div className='relative flex flex-row items-center gap-2'>
-					<Link
-						href='/services'
-						className={`${
-							currentPath.endsWith("location")
-								? "text-white"
-								: "hover:text-white duration-200"
-						}`}>
-					<Link
-						href='/find-us'
-					>
+				<div
+					className={`relative flex flex-row items-center gap-2 ${
+						currentPath.endsWith(
+							"services"
+						)
+							? "text-white"
+							: "hover:text-white duration-200"
+					}`}
+				>
+					<Link href='/services'>
 						Our Services
 					</Link>
 					<ChevronRightIcon
 						className={`size-4 cursor-pointer ${
-							toggle && "rotate-90"
+							toggle &&
+							"rotate-90"
 						} duration-300`}
 						onClick={() => {
-							setToggle(!toggle);
-							setDropDown(!dropdown);
+							setToggle(
+								!toggle
+							);
+							setDropDown(
+								!dropdown
+							);
 						}}
 					/>
 					<div className='absolute flex flex-col top-[2.6rem] -translate-x-1 text-white'>
 						{dropdown && (
-							<div className={`flex flex-col bg-zinc-900 bg-opacity-30 gap-2 rounded-b-lg text-center z-50 ${currentPath.endsWith('/location') ? 'text-white': 'text-neutral-200'} last:rounded-b-lg`}>
+							<div
+								className={`flex flex-col bg-zinc-900 bg-opacity-30 gap-2 rounded-b-lg text-center z-50 last:rounded-b-lg`}
+							>
 								<Link
-									href={"/times"}
-									className='hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2'
-								>
-									Opening Times
-								</Link>
-								<Link
-									href={"/location"}
-									className='hover:bg-zinc-300 duration-200 hover:bg-opacity-20 px-2 p-1'
+									href={
+										"/location"
+									}
+									className={`hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2 p-1 ${
+										currentPath.endsWith(
+											"/location"
+										)
+											? "text-white"
+											: "text-neutral-200"
+									}`}
 								>
 									Location
 								</Link>
 								<Link
-									href={"/sustainability"}
-									className='hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2 pb-2 hover:rounded-b-lg p-1'
+									href={
+										"/sustainability"
+									}
+									className={`hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2 pb-2 hover:rounded-b-lg p-1`}
 								>
 									Sustainability
 								</Link>
@@ -78,7 +90,16 @@ export default function Header() {
 						)}
 					</div>
 				</div>
-				<Link href='/contact' className='hover:text-white duration-200'>
+				<Link
+					href='/contact'
+						className={`${
+							currentPath.endsWith(
+								"/contact"
+							)
+								? "text-white"
+								: "hover:text-white duration-200"
+						} duration-200`}
+				>
 					Contact us
 				</Link>
 			</nav>

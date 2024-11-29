@@ -16,6 +16,7 @@ export default function location() {
 					/>
 				</div>
 			</div>
+			<div className='absolute top-0 flex flex-row items-center justify-center bg-zinc-700 bg-opacity-45 h-full w-full select-none -z-10 p-6 overflow-hidden'> </div>
       <Footer />
     </div>
   );
