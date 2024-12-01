@@ -1,5 +1,5 @@
 "use client";
-import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -15,7 +15,9 @@ export default function Header() {
 				currentPath.endsWith("/about")
 					? "bg-opacity-30"
 					: "bg-opacity-10"
-			} font-funnelSans z-50 px-6`}
+			} ${
+				currentPath.endsWith("/privacy") ? "bg-opacity-80 text-opacity-100" : "bg-opacity-10"
+			} font-funnelSans px-6 `}
 		>
 			<Link href='/' className='text-xl text-white'>
 				ScotsFarm
@@ -34,15 +36,15 @@ export default function Header() {
 					About us
 				</Link>
 				<div
-					className={`relative flex flex-row items-center gap-2 ${
+					className={`relative flex flex-row items-center gap-2 `}
+				>
+					<Link href='/services' className={`${
 						currentPath.endsWith(
 							"services"
 						)
 							? "text-white"
 							: "hover:text-white duration-200"
-					}`}
-				>
-					<Link href='/services'>
+					}`}>
 						Our Services
 					</Link>
 					<ChevronRightIcon
@@ -59,7 +61,7 @@ export default function Header() {
 							);
 						}}
 					/>
-					<div className='absolute flex flex-col top-[2.6rem] -translate-x-1 text-white'>
+					<div className='absolute flex flex-col top-[2.6rem] -translate-x-1'>
 						{dropdown && (
 							<div
 								className={`flex flex-col bg-zinc-900 bg-opacity-30 gap-2 rounded-b-lg text-center z-50 last:rounded-b-lg`}
@@ -73,7 +75,7 @@ export default function Header() {
 											"/location"
 										)
 											? "text-white"
-											: "text-neutral-200"
+											: "hover:text-white"
 									}`}
 								>
 									Location
@@ -82,7 +84,13 @@ export default function Header() {
 									href={
 										"/sustainability"
 									}
-									className={`hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2 pb-2 hover:rounded-b-lg p-1`}
+									className={`hover:bg-neutral-400 duration-200 hover:bg-opacity-20 px-2 pb-2 hover:rounded-b-lg p-1 ${
+										currentPath.endsWith(
+											"/sustainability"
+										)
+											? "text-white"
+											: "hover:text-white"
+									} `}
 								>
 									Sustainability
 								</Link>

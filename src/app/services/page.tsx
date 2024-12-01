@@ -17,13 +17,21 @@ export default function ourServices() {
 			<section className='flex flex-col'>
 				<div className='flex flex-col items-center text-zinc-50 gap-3'>
 					<span className='pt-10 text-6xl font-Rubik text-white'>Our Services</span>
-					<span className='max-w-lg text-center text-white hover:scale-110 duration-200 cursor-pointer'>At ScotsFarm, we pride ourselves on offering a unique and enriching countryside experience. Whether you're a local resident, a day-tripper, or a tourist, our farm has something special for everyone.</span>
+					<span className='max-w-lg text-center text-white hover:scale-110 duration-200 cursor-pointer'>
+						At ScotsFarm, we pride ourselves on offering a unique and enriching countryside
+						experience. Whether you're a local resident, a day-tripper, or a tourist, our farm has
+						something special for everyone.
+					</span>
 				</div>
 			</section>
 
-			<div className='absolute top-0 flex flex-row bg-zinc-700 bg-opacity-60 h-full w-full select-none -z-10 overflow-hidden'>
-				<div className='relative flex flex-col justify-center text-white w-full'>
-					<div className='flex flex-row items-center justify-center gap-32 w-full px-20'>
+			<div className='absolute top-0 flex bg-zinc-700 bg-opacity-60 h-full w-full select-none -z-10 overflow-hidden'>
+				<div className='relative flex flex-col justify-center items-center text-white w-full'>
+				<div className='relative flex flex-col items-center font-Titil'>
+						<span className='text-4xl bg-gradient-to-t from-orange-700 to-amber-300 bg-clip-text text-transparent font-bold shadow-2xl'>BLACK FRIDAY DEAL</span>
+						<span className='text-xl'>All of our products in store are 25% this week! Offer ends Tuesday 3rd December.</span>
+					</div>
+					<div className='flex flex-row items-center justify-center gap-32 w-full px-20 pt-24'>
 						<div className='flex flex-col items-center max-w-xl text-center'>
 							<BuildingStorefrontIcon className='size-10 border rounded-full p-2' />
 							<span className='text-2xl'>The Café</span>
