@@ -47,7 +47,7 @@ export default function Header() {
 									exit='exit'
 									variants={menuVariants}
 									transition={{ duration: 0.3, ease: 'easeInOut' }}
-									className={`flex flex-col bg-zinc-900 bg-opacity-30 gap-2 rounded-b-lg text-center z-50 py-2 px-4 select-none`}
+									className={`flex flex-col bg-zinc-900 bg-opacity-30 gap-4 text-center z-50 p-3 select-none`}
 								>
 									<NavLink name='Location' />
 									<NavLink name='Sustainability' />
@@ -68,7 +68,7 @@ export default function Header() {
 							exit='exit'
 							variants={menuVariants}
 							transition={{ duration: 0.3, ease: 'easeInOut' }}
-							className='absolute flex flex-col top-7 right-0 items-center gap-3 px-3 bg-zinc-900 bg-opacity-30 '
+							className='absolute flex flex-col top-7 right-0 items-center gap-4 p-3 bg-zinc-900 bg-opacity-30 '
 						>
 							<NavLink name='About' />
 							<NavLink name='Services' />

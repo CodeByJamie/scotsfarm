@@ -16,10 +16,10 @@ export default function Home() {
         className="absolute top-0 left-0 -z-50"
       />
       <div className="flex flex-col items-center">
-        <span className="text-7xl max-lg:text-3xl max-xl:text-6xl max-md:2xl text-white font-bold drop-shadow-xl">
+        <span className="text-7xl max-lg:text-4xl max-xl:text-6xl max-md:2xl max-sm:text-xl text-white font-bold drop-shadow-xl">
           Connecting the Countries Together.
         </span>
-        <span className="text-neutral-100 font-semibold text-xl max-lg:text-lg mt-2 drop-shadow-lg">
+        <span className="text-neutral-100 font-semibold text-xl max-sm:text-xs mt-2 drop-shadow-lg">
           Pop into our shop to find some gifts for a loved one!
         </span>
         <FindUs />
