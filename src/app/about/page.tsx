@@ -1,68 +1,63 @@
-import Image from "next/image";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import * as HeroIcons from "@heroicons/react/24/outline";
+import Image from 'next/image';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import { QuestionMarkCircleIcon, RocketLaunchIcon, UsersIcon } from '@heroicons/react/24/outline';
 
 export default function About() {
 	return (
-		<div className='relative h-screen'>
+		<div className='relative min-h-screen'>
 			<Header />
 			<Footer />
-			<div className='absolute top-0 left-0 w-full h-full -z-10'>
-				<div className='relative w-full h-full'>
-					<Image
-						src={"/highlands.jpg"}
-						alt='Edinburgh castle'
-						className='object-cover'
-						fill={true}
-					/>
-				</div>
+			<div className='absolute inset-0 -z-10'>
+				<Image
+					src={'/highlands.jpg'}
+					alt='Edinburgh castle'
+					className='object-cover object-center opacity-80'
+					fill
+					priority
+					sizes="100vw"
+				/>
 			</div>
-			<section className='flex flex-col items-center text-zinc-100'>
-				<div className='flex flex-col items-center text-zinc-50 text-opacity-80 gap-3'>
-					<span className='pt-10 text-6xl font-Rubik text-white'>
-						About Us
-					</span>
-					<span className='max-w-2xl text-center'>
-						Here, you'll find a delightful shop filled with local
-						produce, plants, and handmade goods, perfect for taking
-						a bit of the farm home with you. Our petting zoo offers
-						the chance to meet friendly farm animals, while our café
-						serves up delicious homemade treats.
-					</span>
-				</div>
-				<div className='absolute top-0 flex flex-row items-center justify-center bg-zinc-700 bg-opacity-45 h-full w-full select-none -z-10 p-6 overflow-hidden'>
-					<div className='relative flex flex-row items-center justify-center w-full top-10 gap-40 max-w-fit translate-x-10'>
-						<div className='flex flex-col items-center gap-2 max-w-[14rem] text-center mx-16'>
-							<HeroIcons.QuestionMarkCircleIcon className='size-9 border border-zinc-200 rounded-full p-1 shadow-lg' />
-							<span className='text-2xl'>Who We Are</span>
-							<span className='font-semibold'>
-								A small farm located between Edinburgh and
-								Carlisle who thrives on sustainability.
+			<section className='relative flex flex-col items-center justify-center min-h-screen w-full px-4'>
+				<div className='w-full flex flex-col gap-12'>
+					<div className='flex flex-col text-center items-center justify-center w-full gap-2'>
+						<h1 className='text-center text-5xl font-semibold font-Rubik text-neutral-100'>
+							About us
+						</h1>
+						<span className='text-neutral-200 max-w-2xl'>
+							Here you'll find a delightful shop filled with local produce, plants, and handmade
+							goods, perfect for taking a bit of the farm home with you. Our petting zoo offers
+							the chance to meet friendly farm animals, while our café serves up delicious homemade
+							treats.
+						</span>
+					</div>
+					<div className='flex flex-wrap items-center justify-between text-neutral-100 px-6 font-semibold'>
+						<div className='flex flex-col items-center text-center max-w-xs'>
+							<QuestionMarkCircleIcon className='w-10 h-10 shadow-lg' />
+							<h2 className='text-2xl mt-4'>Who We Are</h2>
+							<span className='mt-2'>
+								A small farm located between Edinburgh and Carlisle that thrives on
+								sustainability.
 							</span>
 						</div>
-						<div className='flex flex-col items-center gap-2 max-w-xs text-center'>
-							<HeroIcons.TrophyIcon className='size-9 border border-zinc-200 rounded-full p-1 shadow-lg' />
-							<span className='text-2xl'>Our Goal</span>
-							<span className='font-semibold'>
-								We aim to offer a peaceful escape from the
-								hustle and bustle, while providing a range of
-								high-quality local products and services that
-								celebrate the best of our countryside.
+						<div className='flex flex-col items-center text-center max-w-xs'>
+							<RocketLaunchIcon className='w-10 h-10 border-2 rounded-full p-1' />
+							<h2 className='text-2xl mt-4'>Our Goal</h2>
+							<span className='mt-2'>
+								We aim to offer a peaceful escape from the hustle and bustle, while providing a
+								range of high-quality local products and services that celebrate the best of our
+								countryside.
 							</span>
 						</div>
-						<div className='flex flex-col items-center gap-2'>
-							<HeroIcons.UsersIcon className='size-9 border border-zinc-200 rounded-full p-1 shadow-lg' />
-							<span className='text-2xl'>Meet The Team</span>
-							<div className='flex flex-col items-center gap-2 font-semibold'>
-								<span>Sophie Turner (Shop Manager)</span>
-								<span>Oliver Brooks (Sales Assistant)</span>
-								<span>
-									Emma Harris (Customer Service
-									Representative)
-								</span>
-								<span>James Fletcher (Stock Clerk)</span>
-							</div>
+						<div className='flex flex-col items-center text-center max-w-xs'>
+							<UsersIcon className='w-10 h-10 border-2 rounded-full p-1' />
+							<h2 className='text-2xl mt-4'>Meet The Team</h2>
+							<span className='mt-2'>
+								Sophie Turner (Shop Manager) <br />
+								Oliver Brooks (Sales Assistant) <br />
+								Emma Harris (Customer Service Representative) <br />
+								James Fletcher (Stock Clerk)
+							</span>
 						</div>
 					</div>
 				</div>

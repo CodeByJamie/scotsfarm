@@ -31,7 +31,7 @@ export default function Header() {
 				ScotsFarm
 			</Link>
 			<nav className='hidden lg:flex items-center gap-12'>
-				<NavLink name='About us' />
+				<NavLink name='About' />
 				<div className={`relative flex items-center justify-center gap-2`}>
 					<NavLink name='Services' />
 					<ChevronRightIcon
@@ -58,7 +58,7 @@ export default function Header() {
 				</div>
 				<NavLink name='Contact' />
 			</nav>
-				<Bars3Icon className='size-5 cursor-pointer mr-5 lg:hidden' onClick={() => setCollapsed(!collapsed)} />
+			<Bars3Icon className='size-5 cursor-pointer mr-5 lg:hidden' onClick={() => setCollapsed(!collapsed)} />
 			<div className='lg:hidden absolute right-0 flex flex-col items-center w-fit'>
 				<AnimatePresence>
 					{!collapsed && (
@@ -68,13 +68,13 @@ export default function Header() {
 							exit='exit'
 							variants={menuVariants}
 							transition={{ duration: 0.3, ease: 'easeInOut' }}
-							className='absolute flex flex-col top-7 right-0 items-center gap-4 p-3 bg-zinc-900 bg-opacity-30 '
+							className='absolute flex flex-col top-7 right-0 items-center gap-4 max-md:p-1 p-3 bg-zinc-900 bg-opacity-30 z-50 '
 						>
 							<NavLink name='About' />
 							<NavLink name='Services' />
 							<NavLink name='Location' />
 							<NavLink name='Sustainability' />
-              <NavLink name='Contact' />
+							<NavLink name='Contact' />
 						</motion.nav>
 					)}
 				</AnimatePresence>

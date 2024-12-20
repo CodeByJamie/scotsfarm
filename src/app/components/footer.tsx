@@ -8,7 +8,7 @@ export default function Footer() {
         <span>scotsfarm@gmail.com</span>
         <span className="text-neutral-300">All rights Reserved. 2024.</span>
       </div>
-      <div className="flex flexx-col items-end">
+      <div className="flex flex-col-reverse">
         <div className="flex flex-row items-center gap-4">
           <Link href={'/privacy'}>Privacy Policy</Link>
           <Link href={'/services'}>Terms & Conditions</Link>

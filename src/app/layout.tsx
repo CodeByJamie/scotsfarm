@@ -12,8 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="bg-neutral-800">
+      <body className="min-h-screen min-w-screen">
         {children}
       </body>
     </html>
