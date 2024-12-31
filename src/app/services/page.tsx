@@ -1,57 +1,72 @@
-import Header from '../components/header';
-import Footer from '../components/footer';
-import Image from 'next/image';
-import { BuildingStorefrontIcon, ClockIcon, HandRaisedIcon } from '@heroicons/react/24/outline';
+import Image from "next/image";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import {
+  BuildingStorefrontIcon,
+  RocketLaunchIcon,
+  UsersIcon,
+} from "@heroicons/react/24/outline";
 
-export default function ourServices() {
-	return (
-		<div className='relative min-h-screen'>
-			<Header />
-			<Footer />
-			<div className='absolute top-0 left-0 w-full h-full -z-50'>
-				<div className='relative w-full h-full'>
-					<Image src={'/cafe.jpg'} alt='Edinburgh castle' className='object-cover' fill={true} />
-				</div>
-			</div>
-
-			<section className='flex flex-col'>
-				<div className='flex flex-col items-center text-zinc-50 gap-3'>
-					<span className='pt-10 text-6xl font-Rubik text-white'>Our Services</span>
-					<span className='max-w-lg text-center text-white hover:scale-110 duration-200 cursor-pointer'>
-						At ScotsFarm, we pride ourselves on offering a unique and enriching countryside
-						experience. Whether you're a local resident, a day-tripper, or a tourist, our farm has
-						something special for everyone.
-					</span>
-				</div>
-			</section>
-
-			<div className='absolute top-0 flex bg-zinc-700 bg-opacity-60 h-full w-full select-none -z-10 overflow-hidden'>
-				<div className='relative flex flex-col justify-center items-center text-white w-full'>
-				<div className='relative flex flex-col items-center font-Titil'>
-						<span className='text-4xl bg-gradient-to-t from-orange-700 to-amber-300 bg-clip-text text-transparent font-bold shadow-2xl'>BLACK FRIDAY DEAL</span>
-						<span className='text-xl'>All of our products in store are 25% this week! Offer ends Tuesday 3rd December.</span>
-					</div>
-					<div className='flex flex-row items-center justify-center gap-32 w-full px-20 pt-24'>
-						<div className='flex flex-col items-center max-w-xl text-center'>
-							<BuildingStorefrontIcon className='size-10 border rounded-full p-2' />
-							<span className='text-2xl'>The Café</span>
-							<span className='text-white text-opacity-90 text-lg'>
-								Nestled in the heart of the countryside, our Farm Shop Café combines
-								rustic charm with modern comfort to create the perfect spot for
-								relaxation and indulgence.
-							</span>
-						</div>
-						<div className='flex flex-col items-center max-w-lg text-center'>
-							<ClockIcon className='size-10 border rounded-full p-2' />
-							<span className='text-2xl'>Opening Times</span>
-							<span className='text-white text-opacity-90 text-lg'>
-								Farm Shop (Mon - Sun) 9am - 5pm <br />
-								The Café (Mon - Fri) 8am - 3pm
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+export default function About() {
+  return (
+    <div className="relative min-h-screen flex flex-col items-center justify-between">
+      <Header />
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src={"/cafe.jpg"}
+          alt="cafe"
+          className="object-cover object-center opacity-40"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+      <section className="relative flex flex-col items-center justify-center h-full w-full px-4 py-16 max-w-screen-lg mx-auto">
+        <div className="w-full flex flex-col gap-12 items-center justify-center text-center">
+          <div className="flex flex-col gap-4 items-center">
+            <h1 className="text-5xl font-semibold font-Rubik text-neutral-100 max-md:text-4xl max-sm:text-3xl">
+              Our Services
+            </h1>
+            <p className="text-neutral-200 max-w-2xl text-lg max-md:text-base">
+              At ScotsFarm we pride ourselves on offering a unique and enriching
+              countryside. Whether you're a local resident, a day tripper or a
+              tourist, our farm has something special for everyone.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-12 text-neutral-100 px-6 font-semibold">
+            <div className="flex flex-col items-center text-center max-w-xs">
+              <BuildingStorefrontIcon className="w-10 h-10 shadow-lg border-2 rounded-full p-1" />
+              <h2 className="text-2xl mt-4 max-md:text-xl">The cafe</h2>
+              <p className="mt-2 text-base max-md:text-sm">
+                Nested in the heart of the countryside, our farm shop cafe
+                combines rustic charm with modern comfort to create the perfect
+                spot for relaxation and indulgence.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center max-w-xs">
+              <RocketLaunchIcon className="w-10 h-10 border-2 rounded-full p-1" />
+              <h2 className="text-2xl mt-4 max-md:text-xl">Opening Hours</h2>
+              <p className="mt-2 text-base max-md:text-sm">
+                We aim to offer a peaceful escape from the hustle and bustle,
+                while providing a range of high-quality local products and
+                services that celebrate the best of our countryside.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <UsersIcon className="w-10 h-10 border-2 rounded-full p-1" />
+              <h2 className="text-2xl mt-4 max-md:text-xl">Meet The Team</h2>
+              <div className="flex flex-col gap-4 mt-2 text-base max-md:text-sm">
+                <span>Sophie Turner (Shop Manager)</span>
+                <span>Oliver Brooks (Sales Assistant)</span>
+                <span>Emma Harris (Customer Service Representative)</span>
+                <span>James Fletcher (Stock Clerk)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
 }

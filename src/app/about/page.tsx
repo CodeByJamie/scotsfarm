@@ -5,63 +5,64 @@ import { QuestionMarkCircleIcon, RocketLaunchIcon, UsersIcon } from '@heroicons/
 
 export default function About() {
 	return (
-		<div className='relative min-h-screen'>
+		<div className='relative min-h-screen flex flex-col items-center justify-between'>
 			<Header />
-			<Footer />
 			<div className='absolute inset-0 -z-10'>
 				<Image
 					src={'/highlands.jpg'}
 					alt='Edinburgh castle'
-					className='object-cover object-center opacity-80'
+					className='object-cover object-center opacity-40'
 					fill
 					priority
 					sizes="100vw"
+					style={{ objectFit: 'cover' }}
 				/>
 			</div>
-			<section className='relative flex flex-col items-center justify-center min-h-screen w-full px-4'>
-				<div className='w-full flex flex-col gap-12'>
-					<div className='flex flex-col text-center items-center justify-center w-full gap-2'>
-						<h1 className='text-center text-5xl font-semibold font-Rubik text-neutral-100'>
+			<section className='relative flex flex-col items-center justify-center h-full w-full px-4 py-16 max-w-screen-lg mx-auto'>
+				<div className='w-full flex flex-col gap-12 items-center justify-center text-center'>
+					<div className='flex flex-col gap-4 items-center'>
+						<h1 className='text-5xl font-semibold font-Rubik text-neutral-100 max-md:text-4xl max-sm:text-3xl'>
 							About us
 						</h1>
-						<span className='text-neutral-200 max-w-2xl'>
+						<p className='text-neutral-200 max-w-2xl text-lg max-md:text-base'>
 							Here you'll find a delightful shop filled with local produce, plants, and handmade
 							goods, perfect for taking a bit of the farm home with you. Our petting zoo offers
 							the chance to meet friendly farm animals, while our café serves up delicious homemade
 							treats.
-						</span>
+						</p>
 					</div>
-					<div className='flex flex-wrap items-center justify-between text-neutral-100 px-6 font-semibold'>
+					<div className='flex flex-wrap justify-center gap-12 text-neutral-100 px-6 font-semibold'>
 						<div className='flex flex-col items-center text-center max-w-xs'>
 							<QuestionMarkCircleIcon className='w-10 h-10 shadow-lg' />
-							<h2 className='text-2xl mt-4'>Who We Are</h2>
-							<span className='mt-2'>
+							<h2 className='text-2xl mt-4 max-md:text-xl'>Who We Are</h2>
+							<p className='mt-2 text-base max-md:text-sm'>
 								A small farm located between Edinburgh and Carlisle that thrives on
 								sustainability.
-							</span>
+							</p>
 						</div>
 						<div className='flex flex-col items-center text-center max-w-xs'>
 							<RocketLaunchIcon className='w-10 h-10 border-2 rounded-full p-1' />
-							<h2 className='text-2xl mt-4'>Our Goal</h2>
-							<span className='mt-2'>
+							<h2 className='text-2xl mt-4 max-md:text-xl'>Our Goal</h2>
+							<p className='mt-2 text-base max-md:text-sm'>
 								We aim to offer a peaceful escape from the hustle and bustle, while providing a
 								range of high-quality local products and services that celebrate the best of our
 								countryside.
-							</span>
+							</p>
 						</div>
-						<div className='flex flex-col items-center text-center max-w-xs'>
+						<div className='flex flex-col items-center text-center'>
 							<UsersIcon className='w-10 h-10 border-2 rounded-full p-1' />
-							<h2 className='text-2xl mt-4'>Meet The Team</h2>
-							<span className='mt-2'>
-								Sophie Turner (Shop Manager) <br />
-								Oliver Brooks (Sales Assistant) <br />
-								Emma Harris (Customer Service Representative) <br />
-								James Fletcher (Stock Clerk)
-							</span>
+							<h2 className='text-2xl mt-4 max-md:text-xl'>Meet The Team</h2>
+							<div className='flex flex-col gap-4 mt-2 text-base max-md:text-sm'>
+								<span>Sophie Turner (Shop Manager)</span>
+								<span>Oliver Brooks (Sales Assistant)</span>
+								 <span>Emma Harris (Customer Service Representative)</span>
+								<span>James Fletcher (Stock Clerk)</span>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+			<Footer />
 		</div>
 	);
 }

@@ -5,9 +5,8 @@ import FindUs from "./components/findUs";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center relative h-screen w-screen">
+    <div className="relative min-h-screen flex flex-col justify-between">
       <Header />
-      <Footer />
       <Image
         src="/glencoe.jpg"
         alt="Image of Glencoe"
@@ -24,6 +23,7 @@ export default function Home() {
         </span>
         <FindUs />
       </div>
+      <Footer />
     </div>
   );
 }

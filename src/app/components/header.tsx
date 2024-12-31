@@ -25,7 +25,7 @@ export default function Header() {
 
 	return (
 		<div
-			className={`absolute top-0 left-0 w-full h-fit flex justify-between items-center p-4 text-zinc-300 bg-zinc-900 bg-opacity-30 font-funnelSans px-6`}
+			className={`sticky top-0 left-0 w-full h-fit flex justify-between items-center p-4 text-zinc-300 bg-zinc-900 bg-opacity-30 font-funnelSans px-6 z-50`}
 		>
 			<Link href='/' className='text-xl text-white'>
 				ScotsFarm
@@ -61,14 +61,14 @@ export default function Header() {
 			<Bars3Icon className='size-5 cursor-pointer mr-5 lg:hidden' onClick={() => setCollapsed(!collapsed)} />
 			<div className='lg:hidden absolute right-0 flex flex-col items-center w-fit'>
 				<AnimatePresence>
-					{!collapsed && (
+					{collapsed && (
 						<motion.nav
 							initial='hidden'
 							animate='visible'
 							exit='exit'
 							variants={menuVariants}
 							transition={{ duration: 0.3, ease: 'easeInOut' }}
-							className='absolute flex flex-col top-7 right-0 items-center gap-4 max-md:p-1 p-3 bg-zinc-900 bg-opacity-30 z-50 '
+							className='absolute flex flex-col top-7 right-0 items-center gap-6 max-md:p-2 p-3 bg-zinc-900 bg-opacity-80 rounded-b-xl z-50 '
 						>
 							<NavLink name='About' />
 							<NavLink name='Services' />
